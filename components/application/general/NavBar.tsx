@@ -7,13 +7,13 @@ type ApplicationTopNavProps = {
   locale: string;
 };
 
-export function ApplicationTopNav({ locale }: ApplicationTopNavProps) {
+export function NavBar({ locale }: ApplicationTopNavProps) {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 mx-auto flex w-full max-w-7xl items-center justify-between rounded-b-[1.5rem] bg-white/70 px-8 py-4 shadow-xl shadow-slate-900/5 backdrop-blur-xl md:rounded-b-[3rem]">
       <div className="flex items-center gap-2">
         <Link
           className="application-headline text-xl font-bold tracking-[-0.04em] text-teal-800"
-          href={`/application/${locale}`}
+          href={`/application`}
         >
           MedVoyage
         </Link>

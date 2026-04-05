@@ -1,6 +1,6 @@
-import { ApplicationFooter } from "@/components/application/form/application-footer";
 import { ApplicationMobileNav } from "@/components/application/form/application-mobile-nav";
-import { ApplicationTopNav } from "@/components/application/form/application-top-nav";
+import {NavBar} from "@/components/application/general/NavBar";
+import {Footer} from "@/components/application/general/Footer";
 
 type ApplicationShellProps = {
   children: React.ReactNode;
@@ -13,10 +13,10 @@ export function ApplicationShell({
 }: ApplicationShellProps) {
   return (
     <div className="application-flow flex min-h-screen flex-col">
-      <ApplicationTopNav locale={locale} />
+      <NavBar locale={locale} />
       {children}
       <ApplicationMobileNav />
-      <ApplicationFooter />
+      <Footer />
     </div>
   );
 }

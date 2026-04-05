@@ -146,6 +146,8 @@ create table public.patient_medical_documents (
                                                       unique (bucket_name, storage_path)
 );
 
+alter table public.patient_medical_documents enable row level security;
+
 create index idx_patient_medical_documents_user_id
     on public.patient_medical_documents (user_id);
 

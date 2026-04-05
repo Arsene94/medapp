@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 
 import "../../globals.css";
-import { ApplicationShell } from "@/components/application/form/application-shell";
 import { routing } from "@/i18n/routing";
 
 const manrope = Manrope({
@@ -54,9 +53,7 @@ export default async function ApplicationLocaleLayout({
       lang={locale}
     >
       <body className="application-flow-body">
-        <NextIntlClientProvider>
-          <ApplicationShell locale={locale}>{children}</ApplicationShell>
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

@@ -37,7 +37,7 @@ export function ApplicationLinearProgressHeader({
 }: ApplicationLinearProgressHeaderProps) {
   return (
     <div className="mb-12">
-      <div className="mb-4 flex items-end justify-between gap-6">
+      <div className="mb-4 flex flex-col items-start justify-between gap-6">
         <div>
           <span className="text-xs font-bold uppercase tracking-[0.28em] text-[#006565]">
             {stepLabel}
@@ -46,7 +46,7 @@ export function ApplicationLinearProgressHeader({
             {title}
           </h1>
         </div>
-        {rightSlot ? <div className="hidden md:block">{rightSlot}</div> : null}
+        {rightSlot ? rightSlot : null}
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-[#d5e3fd]">
         <div

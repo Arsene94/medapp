@@ -3,6 +3,7 @@ import { Activity, CheckCircle2, Search, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {router} from "next/client";
 
 type Offer = {
   clinic: string;
@@ -104,6 +105,7 @@ export function HeroSection() {
                 size="search"
                 startIcon={<Search size={20} />}
                 variant="searchCta"
+                onClick={() => router.push("/application")}
               >
                 Caută
               </Button>

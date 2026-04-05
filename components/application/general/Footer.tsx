@@ -1,4 +1,4 @@
-export function ApplicationFooter() {
+export function Footer() {
   return (
     <footer className="mt-20 bg-[#ccdbf4] px-8 py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">

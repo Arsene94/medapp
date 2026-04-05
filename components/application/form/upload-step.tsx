@@ -3,7 +3,6 @@ import {Link} from '@/i18n/navigation';
 import { ApplicationIcon } from "@/components/application/form/application-icon";
 import { ApplicationLinearProgressHeader } from "@/components/application/form/application-progress";
 import { recentDocuments } from "@/components/application/form/data";
-
 type UploadStepProps = {
   locale: string;
 };
@@ -114,7 +113,7 @@ export function UploadStep({ locale }: UploadStepProps) {
               className="mx-auto flex items-center justify-center gap-3 rounded-full bg-orange-500 px-10 py-5 text-lg font-bold text-white shadow-xl shadow-orange-500/30 transition-all duration-300 hover:scale-[1.01] hover:bg-orange-600 active:scale-[0.99]"
               href={`/application/consult`}
             >
-              Continuă pasul următor
+              Continuă
               <ApplicationIcon name="arrow_forward" />
             </Link>
             <p className="text-center text-xs text-slate-500">

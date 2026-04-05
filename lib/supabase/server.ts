@@ -1,6 +1,8 @@
 import {createServerClient} from '@supabase/ssr';
 import {cookies} from 'next/headers';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export async function createClient() {
     const cookieStore = await cookies();
 
@@ -17,14 +19,13 @@ export async function createClient() {
                         for (const {name, value, options} of cookiesToSet) {
                             cookieStore.set(name, value, {
                                 ...options,
-                                domain: 'domain.ro',
+                                ...(isProd ? {domain: 'medapp-eosin.vercel.app'} : {}),
                                 path: '/',
                                 sameSite: 'lax',
-                                secure: true
+                                secure: isProd
                             });
                         }
-                    } catch {
-                    }
+                    } catch {}
                 }
             }
         }

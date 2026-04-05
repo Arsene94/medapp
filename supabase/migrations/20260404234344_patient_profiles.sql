@@ -40,6 +40,7 @@ create table public.patient_profiles (
     created_at timestamptz not null default now(),
     updated_at timestamptz not null default now()
 );
+alter table public.patient_profiles enable row level security;
 
 create index idx_patient_profiles_last_name
     on public.patient_profiles (last_name);

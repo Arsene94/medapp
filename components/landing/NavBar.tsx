@@ -2,23 +2,24 @@
 
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import {Link} from '@/i18n/navigation';
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
+import { Link, useRouter } from "@/i18n/navigation";
+import LocaleSwitcher from "@/components/landing/LocaleSwitcher";
 import { MedVoyageLogo } from "@/components/landing/medvoyage-logo";
-import LocaleSwitcher from "@/components/general/LocaleSwitcher";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const t = useTranslations('navbar');
+  const router = useRouter();
+  const t = useTranslations("navbar");
 
   const navItems = [
-    { href: "#cum-functioneaza", label: t('how_it_works') },
-    { href: "#avantaje", label: t('advantages') },
-    { href: "#clinici", label: t('partner_clinics') },
-    { href: "#testimoniale", label: t('reviews') },
+    { href: "#cum-functioneaza", label: t("how_it_works") },
+    { href: "#avantaje", label: t("advantages") },
+    { href: "#clinici", label: t("partner_clinics") },
+    { href: "#testimoniale", label: t("reviews") },
   ];
 
   useEffect(() => {
@@ -61,23 +62,31 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-8 font-medium text-slate-600">
           {navItems.map((item) => (
-              <Link
-                key={item.label}
-                className="hover:text-teal-600 transition-colors"
-                href={item.href}
-                >
-                {item.label}
-              </Link>
+            <Link
+              key={item.label}
+              className="hover:text-teal-600 transition-colors"
+              href={item.href}
+            >
+              {item.label}
+            </Link>
           ))}
           <LocaleSwitcher />
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex gap-2">
           <Button
+            onClick={() => router.push("/application/login")}
             size="pill"
             variant="navCta"
           >
-            {t('download_app')}
+            {t("login")}
+          </Button>
+          <Button
+            onClick={() => router.push("/application/register")}
+            size="pill"
+            variant="orange"
+          >
+            {t("register")}
           </Button>
         </div>
 
@@ -102,13 +111,28 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
-          <div className="px-6 pt-4 pb-2">
+          <div className="px-6 pt-4 pb-2 flex flex-col gap-3">
             <Button
               fullWidth
+              onClick={() => {
+                closeMobileMenu();
+                router.push("/application/login");
+              }}
               size="lg"
               variant="mobileCta"
             >
-              {t('download_app')}
+              {t("login")}
+            </Button>
+            <Button
+              fullWidth
+              onClick={() => {
+                closeMobileMenu();
+                router.push("/application/register");
+              }}
+              size="lg"
+              variant="orange"
+            >
+              {t("register")}
             </Button>
           </div>
         </div>

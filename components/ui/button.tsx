@@ -5,35 +5,35 @@ import { cn } from "@/lib/cn";
 
 const buttonVariantClasses = {
   dark:
-    "bg-[#0d1c2f] text-white font-bold active:scale-95 hover:opacity-95",
+    "bg-[#0d1c2f] text-white font-bold active:scale-95 hover:bg-[#233144]",
   ghost:
-    "bg-transparent text-slate-600 font-medium hover:opacity-80",
+    "bg-transparent text-[#515f74] font-medium hover:bg-[#eff4ff] hover:text-[#006565]",
   iconPrimary:
-    "bg-[#006565] text-white hover:opacity-95 active:scale-95",
+    "bg-[#008080] text-white hover:bg-[#006565] active:scale-95",
   mobileCta:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "bg-[#006565] text-white font-bold shadow-lg shadow-[#006565]/20 hover:bg-[#008080] active:scale-95",
   navCta:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "bg-[#233144] text-[#ebf1ff] font-bold shadow-lg shadow-[#233144]/15 hover:bg-[#0d1c2f] active:scale-95",
   offerDark:
-    "bg-[#0d1c2f] text-white font-bold active:scale-95 hover:opacity-95",
+    "bg-[#515f74] text-white font-bold active:scale-95 hover:bg-[#3a485b]",
   offerPrimary:
-    "bg-[#006565] text-white font-bold hover:bg-[#008080] active:scale-95",
+    "bg-[#76d6d5] text-[#004f4f] font-bold hover:bg-[#93f2f2] active:scale-95",
   orange:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "bg-[#be5300] text-white font-bold shadow-lg shadow-[#be5300]/20 hover:bg-[#974000] active:scale-95",
   searchCta:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "border border-[#93f2f2]/40 bg-[#d5e3fd] text-[#004f4f] font-bold shadow-lg shadow-[#d5e3fd]/40 hover:bg-[#e3fffe] active:scale-95",
   segmentedActive:
-    "bg-[#006565] text-white font-bold",
+    "bg-[#006565] text-white font-bold shadow-sm shadow-[#006565]/20",
   segmentedIdle:
-    "bg-[#e6eeff] text-[#0d1c2f] font-medium hover:bg-[#dde9ff]",
+    "bg-[#d5e3fd] text-[#3e4949] font-medium hover:bg-[#dde9ff]",
   surface:
-    "bg-[#e6eeff] text-[#0d1c2f] font-medium hover:bg-[#dde9ff]",
+    "border border-[#bdc9c8]/30 bg-white text-[#0d1c2f] font-medium hover:bg-[#eff4ff]",
   teal:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "bg-[#004f4f] text-white font-bold shadow-lg shadow-[#004f4f]/20 hover:bg-[#006565] active:scale-95",
   textNav:
-    "bg-transparent text-slate-600 font-medium hover:opacity-80",
+    "bg-transparent text-[#006565] font-medium hover:bg-[#eff4ff] hover:text-[#004f4f]",
   downloadCta:
-    "bg-[#006565] text-white font-bold shadow-lg shadow-teal-900/10 hover:opacity-95 active:scale-95",
+    "bg-[#ffdbca] text-[#783200] font-bold shadow-lg shadow-[#ffdbca]/30 hover:bg-[#ffb690] active:scale-95",
 } as const;
 
 const buttonSizeClasses = {

@@ -3,8 +3,6 @@ import { CtaSection } from "@/components/landing/cta-section";
 import { HeroSection } from "@/components/landing/hero-section";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
 import { PartnerLogosSection } from "@/components/landing/partner-logos-section";
-import {Navbar} from "@/components/general/NavBar";
-import {Footer} from "@/components/general/Footer";
 
 export function LandingPage() {
   return (

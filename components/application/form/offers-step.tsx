@@ -5,6 +5,7 @@ import {
   PersonalizedOfferCard,
 } from "@/components/application/form/application-offer-card";
 import { ApplicationBackLink, ApplicationStepTrail } from "@/components/application/form/application-progress";
+import { TravelConfigurationSection } from "@/components/application/form/travel-configuration-section";
 
 type OffersStepProps = {
   locale: string;
@@ -28,6 +29,8 @@ export function OffersStep({ locale }: OffersStepProps) {
           performante centre clinice pentru procedura solicitată.
         </p>
       </header>
+
+      <TravelConfigurationSection />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="space-y-12 lg:col-span-8">

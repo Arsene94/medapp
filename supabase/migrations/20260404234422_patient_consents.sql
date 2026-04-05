@@ -33,6 +33,8 @@ create table public.patient_consents (
                                          created_at timestamptz not null default now()
 );
 
+alter table public.patient_consents enable row level security;
+
 create index idx_patient_consents_user_id
     on public.patient_consents (user_id);
 

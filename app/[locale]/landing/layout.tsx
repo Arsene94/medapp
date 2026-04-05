@@ -5,8 +5,8 @@ import {hasLocale, NextIntlClientProvider} from "next-intl";
 import {routing} from "@/i18n/routing";
 import {notFound} from "next/navigation";
 import {setRequestLocale} from "next-intl/server";
-import {Navbar} from "@/components/general/NavBar";
-import {Footer} from "@/components/general/Footer";
+import {Navbar} from "@/components/landing/NavBar";
+import {Footer} from "@/components/landing/Footer";
 
 const manrope = Manrope({
   variable: "--font-manrope",
