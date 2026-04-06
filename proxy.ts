@@ -6,7 +6,7 @@ const handleI18nRouting = createMiddleware(routing);
 
 const ROOT_DOMAIN = 'domain.ro';
 const APP_HOST = `app.${ROOT_DOMAIN}`;
-const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '0.0.0.0']);
+const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '0.0.0.0', 'medapp-eosin.vercel.app']);
 
 function getHostname(request: NextRequest) {
     return (
