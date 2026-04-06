@@ -81,7 +81,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-900 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>© 2024 MedVoyage App. Toate drepturile rezervate.</p>
+        <p>© 2026 MedVoyage App. Toate drepturile rezervate.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-white transition-colors">
             Termeni și condiții

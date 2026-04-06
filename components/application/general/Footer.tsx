@@ -7,7 +7,7 @@ export function Footer() {
             MedVoyage
           </span>
           <p className="mt-2 text-sm text-[#515f74]">
-            © 2024 Clinical Sanctuary Ecosystem. Toate drepturile rezervate.
+            © 2026 Clinical Sanctuary Ecosystem. Toate drepturile rezervate.
           </p>
         </div>
 

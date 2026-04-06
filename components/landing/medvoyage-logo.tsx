@@ -8,7 +8,8 @@ type MedVoyageLogoProps = {
   iconSize: number;
   iconStrokeWidth?: number;
   splitAccent?: boolean;
-  textClassName: string;
+  textClassName?: string;
+  showText?: boolean;
 };
 
 export function MedVoyageLogo({
@@ -20,6 +21,7 @@ export function MedVoyageLogo({
   iconStrokeWidth = 2.5,
   splitAccent = false,
   textClassName,
+  showText = true
 }: MedVoyageLogoProps) {
   const wrapperClassName = className
     ? `flex items-center gap-2 ${className}`
@@ -34,13 +36,18 @@ export function MedVoyageLogo({
           strokeWidth={iconStrokeWidth}
         />
       </div>
-      {splitAccent ? (
-        <span className={textClassName}>
-          Med<span className={accentClassName}>Voyage</span>
-        </span>
-      ) : (
-        <span className={textClassName}>MedVoyage</span>
-      )}
+      {
+        showText ? (
+            splitAccent ? (
+                <span className={textClassName}>
+        Med<span className={accentClassName}>Voyage</span>
+      </span>
+            ) : (
+                <span className={textClassName}>MedVoyage</span>
+            )
+        ) : null
+      }
+
     </div>
   );
 }

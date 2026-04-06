@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Activity, CheckCircle2, Search, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {router} from "next/client";
+import { useRouter } from "@/i18n/navigation";
 
 type Offer = {
   clinic: string;
@@ -67,6 +69,8 @@ function OfferCard({
 }
 
 export function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
