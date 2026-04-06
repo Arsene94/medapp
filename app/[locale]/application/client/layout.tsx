@@ -1,4 +1,4 @@
-import {ClientSideBar} from "@/components/application/client/SideBar";
+import { ClientSidebarShell } from "@/components/application/client/ClientSidebarShell";
 
 type Props = {
     children: React.ReactNode;
@@ -9,9 +9,6 @@ export default async function FlowLayout({ children, params }: Props) {
     await params;
 
     return (
-        <div className="flex min-h-screen">
-            <ClientSideBar />
-            {children}
-        </div>
+        <ClientSidebarShell>{children}</ClientSidebarShell>
     );
 }

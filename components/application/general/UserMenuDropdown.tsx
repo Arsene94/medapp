@@ -4,16 +4,19 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 
 import { ApplicationIcon, type ApplicationIconName } from "@/components/application/form/application-icon";
+import {Link} from "@/i18n/navigation";
 
 const menuItems: Array<{
   icon: ApplicationIconName;
   label: string;
+  href: string;
   tone?: "default" | "danger";
 }> = [
-  { icon: "person", label: "Profilul meu" },
-  { icon: "settings", label: "Setări cont" },
-  { icon: "history", label: "Istoric cazuri" },
-  { icon: "logout", label: "Deconectare", tone: "danger" },
+  { icon: "person", label: "Dashboard", href: "/application/client" },
+  { icon: "person", label: "Caz Nou", href: "/application" },
+  { icon: "settings", label: "Setări cont", href: "#" },
+  { icon: "history", label: "Istoric cazuri", href: "#" },
+  { icon: "logout", label: "Deconectare", tone: "danger", href: "#" },
 ];
 
 const AVATAR_SRC =
@@ -97,18 +100,16 @@ export function UserMenuDropdown() {
 
         <div className="p-2">
           {menuItems.slice(0, 3).map((item) => (
-            <button
+            <Link
               className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-slate-600 transition-colors hover:bg-teal-50 hover:text-teal-700"
               key={item.label}
-              onClick={() => {
-                setOpen(false);
-              }}
+              href={item.href}
               role="menuitem"
               type="button"
             >
               <ApplicationIcon name={item.icon} size={20} />
               {item.label}
-            </button>
+            </Link>
           ))}
         </div>
 

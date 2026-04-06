@@ -1,13 +1,14 @@
 import {
-  Clock, Download,
+  Box, Camera,
+  Clock, Download, Eye,
   FilePenLine,
   FileSearchCorner,
   Home,
   Hourglass,
   LayoutDashboardIcon, ListFilter, LogOut,
-  LucideIcon, MapPin,
-  Microscope,
-  RefreshCcw, Search,
+  LucideIcon, Mail, MapPin, Megaphone, MessageCircleMore,
+  Microscope, Pill,
+  RefreshCcw, Save, Search,
   Settings
 } from "lucide-react";
 import {
@@ -58,6 +59,7 @@ export type ApplicationIconName =
   | "arrow_forward"
   | "auto_awesome"
   | "biotech"
+  | "campaign"
   | "chat_bubble"
   | "check_circle"
   | "clinical_notes"
@@ -79,6 +81,7 @@ export type ApplicationIconName =
   | "local_hospital"
   | "location"
   | "logout"
+  | "mail"
   | "medical_services"
   | "mic"
   | "monitoring"
@@ -86,22 +89,28 @@ export type ApplicationIconName =
   | "notifications"
   | "neurology"
   | "person"
+  | "photo_camera"
   | "picture_as_pdf"
+  | "prescriptions"
   | "radiology"
   | "radio_button_unchecked"
   | "savings"
+  | "save"
   | "schedule"
   | "search"
   | "security"
   | "send"
   | "settings"
+  | "sms"
   | "stars"
   | "support_agent"
   | "sync"
   | "translate"
   | "upload_file"
   | "verified"
-  | "verified_user";
+  | "verified_user"
+  | "visibility"
+  | "view_in_ar";
 
 const iconMap: Record<ApplicationIconName, LucideIcon> = {
   account_circle: CircleUserRound,
@@ -112,6 +121,7 @@ const iconMap: Record<ApplicationIconName, LucideIcon> = {
   arrow_forward: ArrowRight,
   auto_awesome: Sparkles,
   biotech: Microscope,
+  campaign: Megaphone,
   chat_bubble: MessageCircle,
   check_circle: BadgeCheck,
   clinical_notes: ClipboardList,
@@ -133,6 +143,7 @@ const iconMap: Record<ApplicationIconName, LucideIcon> = {
   local_hospital: Hospital,
   location: MapPin,
   logout: LogOut,
+  mail: Mail,
   medical_services: Stethoscope,
   mic: Mic,
   monitoring: Activity,
@@ -140,15 +151,19 @@ const iconMap: Record<ApplicationIconName, LucideIcon> = {
   neurology: Brain,
   notifications: Bell,
   person: User,
+  photo_camera: Camera,
   picture_as_pdf: FileText,
+  prescriptions: Pill,
   radiology: Activity,
   radio_button_unchecked: Circle,
+  save: Save,
   savings: PiggyBank,
   schedule: Clock,
   search: Search,
   security: Shield,
   send: Send,
   settings: Settings,
+  sms: MessageCircleMore,
   stars: Sparkles,
   support_agent: Headset,
   sync: RefreshCcw,
@@ -156,6 +171,8 @@ const iconMap: Record<ApplicationIconName, LucideIcon> = {
   upload_file: Upload,
   verified: BadgeCheck,
   verified_user: ShieldCheck,
+  visibility: Eye,
+  view_in_ar: Box,
 };
 
 type ApplicationIconProps = {
@@ -183,8 +200,6 @@ export function ApplicationIcon({
       className={cn("shrink-0", className)}
       size={size}
       strokeWidth={strokeWidth}
-      fill={fill}
-      stroke={stroke}
     />
   );
 }

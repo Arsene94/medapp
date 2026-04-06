@@ -1,3 +1,4 @@
+import 'server-only';
 import {createServerClient} from '@supabase/ssr';
 import {cookies} from 'next/headers';
 
@@ -19,7 +20,7 @@ export async function createClient() {
                         for (const {name, value, options} of cookiesToSet) {
                             cookieStore.set(name, value, {
                                 ...options,
-                                ...(isProd ? {domain: 'medapp-eosin.vercel.app'} : {}),
+                                ...(isProd ? {domain: 'domain.ro'} : {}),
                                 path: '/',
                                 sameSite: 'lax',
                                 secure: isProd
