@@ -102,7 +102,6 @@ function SidebarContent({ onNavigate }: { onNavigate: () => void }) {
       <nav className="flex-1 space-y-1">
         {navItems.map((item) => {
           const active = item.matches(currentPath);
-
           return (
             <Link
               key={item.label}
@@ -126,7 +125,8 @@ function SidebarContent({ onNavigate }: { onNavigate: () => void }) {
       </nav>
 
       <div className="mt-auto space-y-6 px-4">
-        <button
+        <Link
+          href="/application"
           className="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 font-headline font-bold text-on-primary shadow-lg shadow-primary/10 transition-colors hover:bg-primary-container"
           onClick={onNavigate}
           type="button"
@@ -138,7 +138,7 @@ function SidebarContent({ onNavigate }: { onNavigate: () => void }) {
             stroke={WHITE_ICON_COLOR}
           />
           Caz Nou
-        </button>
+        </Link>
 
         <div className="border-t border-slate-100 pt-6">
           <Link

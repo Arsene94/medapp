@@ -54,8 +54,8 @@ export type GuaranteeItem = {
 };
 
 export const applicationNavItems: ApplicationNavItem[] = [
-  { href: "#", label: "Dashboard" },
-  { active: true, href: "#", label: "My Records" },
+  { href: "/application/client", label: "Dashboard" },
+  { active: true, href: "/application", label: "New Records" },
   { href: "#", label: "Find Clinics" },
 ];
 

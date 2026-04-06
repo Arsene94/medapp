@@ -1,5 +1,6 @@
 import {ClientTopBar} from "@/components/application/client/TopBar";
 import {ApplicationIcon} from "@/components/application/form/application-icon";
+import {Link} from "@/i18n/navigation";
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -21,11 +22,12 @@ export default async function Page({ params }: Props) {
                             <p className="text-slate-500 max-w-md">Urmăriți evoluția consultărilor dumneavoastră și
                                 rapoartele medicale integrate.</p>
                         </div>
-                        <button
+                        <Link
+                            href="/application"
                             className="bg-tertiary text-on-tertiary px-8 py-4 rounded-full font-bold shadow-xl shadow-tertiary/10 transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
                             <span className="material-symbols-outlined" data-icon="add_circle">add_circle</span>
                             Caz Nou
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="mb-14">
